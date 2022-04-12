@@ -2,4 +2,15 @@
     background-color: #333;
     color: #fff;
     padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.siteheader a{
+    padding: 0.4rem 0.5rem 0  0.5rem;
+    border: #fff solid 2px;
+    border-radius: 0.5rem;
+}
+.siteheader a:hover{
+    border-color: #ff4b4b;
+    color: #ff4b4b; 
 }
