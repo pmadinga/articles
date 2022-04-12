@@ -10,7 +10,7 @@ generator client {
 model Blog{
   id Int @id @default(autoincrement())
   author String @default("Phiwa Madinga")
-  date DateTime
+  // date DateTime
   title String
   description String 
   body String
