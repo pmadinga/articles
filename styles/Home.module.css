@@ -1,5 +1,22 @@
-.nav{
-  background-color: #333;
-  color: #fff;
-  
+.blog{
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #fff;
+  border-left: 0.5rem solid #fff;  
+  transition: 0.1s ease-in-out;
+}
+.blog:hover{
+  border-left: 0.5rem solid #ff4b4b;  
+  box-shadow: 1px 1px 3px #33333310;
+}
+
+
+.title{
+  border-bottom: 0.5px solid #ccc;
+}
+.blog_info{
+  color: #bbb;
+  font-style: italic;
+  display: block;
+  margin-bottom: 1rem;
 }
