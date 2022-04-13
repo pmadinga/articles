@@ -5,12 +5,12 @@
     display: flex;
     justify-content: space-between;
 }
-.siteheader a{
+.create{
     padding: 0.4rem 0.5rem 0  0.5rem;
     border: #fff solid 2px;
     border-radius: 0.5rem;
 }
-.siteheader a:hover{
+.create:hover{
     border-color: #ff4b4b;
     color: #ff4b4b; 
 }

@@ -10,8 +10,9 @@ generator client {
 model Blog{
   id Int @id @default(autoincrement())
   author String @default("Phiwa Madinga")
-  // date DateTime
+  date DateTime @default(now())
   title String
   description String 
-  body String
+  content String
+  slug String
 }

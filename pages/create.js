@@ -2,13 +2,18 @@ import Head from "next/head";
 import { useState } from "react";
 import styles from '../styles/Create.module.css';
 const Create = () =>{
-    const [blogData, setBlogData] = useState({})
-
-    const saveBlog = (e) =>{
-        e.preventDefault();
-        console.log({...blogData});
+    const [blogData, setBlogData] = useState({});
+    async function saveBlog(evt){
+        evt.preventDefault()
+        console.log(blogData);
+        const response = await fetch("/api/blogs", {
+            method: "Post",
+            body: JSON.stringify(blogData)
+        });
+        return await response.json();
     }
-    return(    
+
+    return (    
         <>
             <Head>
                 <title>Articles | Create</title>
@@ -18,9 +23,13 @@ const Create = () =>{
                 <hr className={styles.ruler}/>
 
                 <form className={styles.form} onSubmit={saveBlog}>
-                    <input type="text" name="title" placeholder="Title" onChange={e => setBlogData({...blogData, title: e.target.value})}/>
-                    <textarea name="description" placeholder="Description" className={styles.desc} onChange={e => setBlogData({...blogData, desription: e.target.value})}></textarea>
-                    <textarea name="body" placeholder="Your blog..." className={styles.body} onChange={e => setBlogData({...blogData, body: e.target.value})}></textarea>
+                    <input type="text" name="title" placeholder="Title" onChange={e => setBlogData({
+                        ...blogData, title: e.target.value
+                        })}
+                    />
+
+                    <textarea name="description" placeholder="Description" className={styles.desc} onChange={e => setBlogData({...blogData, description: e.target.value})}></textarea>
+                    <textarea name="body" placeholder="Your blog..." className={styles.body} onChange={e => setBlogData({...blogData, content: e.target.value})}></textarea>
                     <button className={styles.submit}>Publish Blog</button>
                 </form>
             </div>

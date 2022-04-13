@@ -17,7 +17,7 @@ const Home = ({ data }) =>{
             <div className={styles.blog} key={item.id}>
               <h2 className={styles.title}>{item.title}</h2>
               <span className={styles.blog_info}>{item.author}</span>
-              <p className={styles.desc}>{item.body}</p>
+              <p className={styles.desc}>{item.content}</p>
               <Link href={`/blog/${item.id}`}  >
                 <a className={styles.read_more}>Read more</a>
               </Link>
