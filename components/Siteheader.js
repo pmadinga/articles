@@ -5,8 +5,8 @@ const Siteheader = () =>{
     return(
         <div className={styles.siteheader}>
             <h1>Articles</h1>
-            <Link href={"./create"}>
-                <a>Create a Post</a>
+            <Link href={"/create"} passHref>
+                <a>Create a post</a>
             </Link>
         </div>
     )

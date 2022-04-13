@@ -6,7 +6,6 @@ import styles from '../styles/Home.module.css'
 const prisma = new PrismaClient()
 
 const Home = ({ data }) =>{
-  console.log(data);
   return(
     <>
       <Head>
@@ -19,7 +18,7 @@ const Home = ({ data }) =>{
               <h2 className={styles.title}>{item.title}</h2>
               <span className={styles.blog_info}>{item.author}</span>
               <p className={styles.desc}>{item.body}</p>
-              <Link href={`/blog/`}>
+              <Link href={`/blog/${item.id}`}>
                 <a>Read more</a>
               </Link>
             </div>
