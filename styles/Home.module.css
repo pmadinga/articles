@@ -20,3 +20,16 @@
   display: block;
   margin-bottom: 1rem;
 }
+.read_more{
+  padding: 0.2rem;
+  margin-top: 0.6rem;
+  display: block;
+  width: max-content;
+  border: #333 solid 2px;
+  border-radius: 0.3rem;
+  transition: 0.1s ease-in-out;
+}
+.read_more:hover{
+  background-color: #333;
+  color: #fff;
+}
