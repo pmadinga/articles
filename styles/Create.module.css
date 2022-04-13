@@ -1,0 +1,53 @@
+.title{
+    margin: 1rem 0;
+    font-weight: 400;
+}
+.ruler{
+    border: 0.4px solid #ccc;
+    margin-bottom: 1rem;
+}
+.form input, .form textarea{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    color: #000
+}
+.form input, 
+.desc,
+.body:focus{
+    box-shadow: none;
+    outline: none;
+}
+.form input{
+    font-size: 3rem;
+    border-bottom: 0.5px solid #eee;
+
+}
+.desc{
+    font-size: 1.2rem;
+    resize: none;
+    height: 4rem;
+    border-bottom: 0.5px solid #eee!important;
+}
+.body::-webkit-resizer{
+    display: none;
+}
+.body{
+    font-size: 1rem;
+    resize: none;
+    min-height: 20rem;
+}
+.submit{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.3rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.submit:hover{
+    transform: scale(1.1)
+}
