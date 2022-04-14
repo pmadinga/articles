@@ -2,10 +2,10 @@ import Head from "next/head";
 import { useState } from "react";
 import styles from '../styles/Create.module.css';
 const Create = () =>{
-    const [blogData, setBlogData] = useState({});
+    const [blogData, setBlogData] = useState();
+
     async function saveBlog(evt){
         evt.preventDefault()
-        console.log(blogData);
         const response = await fetch("/api/blogs", {
             method: "Post",
             body: JSON.stringify(blogData)
@@ -24,7 +24,7 @@ const Create = () =>{
 
                 <form className={styles.form} onSubmit={saveBlog}>
                     <input type="text" name="title" placeholder="Title" onChange={e => setBlogData({
-                        ...blogData, title: e.target.value
+                        ...blogData, title: e.target.value, slug: String(e.target.value).split(" ").join("-")
                         })}
                     />
 
