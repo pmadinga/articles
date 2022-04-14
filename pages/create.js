@@ -17,6 +17,7 @@ const Create = () =>{
         <>
             <Head>
                 <title>Articles | Create</title>
+                
             </Head>
             <div className="container">
                 <h3 className={styles.title}>Publish an article</h3>
@@ -24,7 +25,7 @@ const Create = () =>{
 
                 <form className={styles.form} onSubmit={saveBlog}>
                     <input type="text" name="title" placeholder="Title" onChange={e => setBlogData({
-                        ...blogData, title: e.target.value, slug: String(e.target.value).split(" ").join("-")
+                        ...blogData, title: e.target.value, slug: String(e.target.value).toLowerCase().split(" ").join("-")
                         })}
                     />
 
